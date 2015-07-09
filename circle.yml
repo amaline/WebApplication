@@ -13,7 +13,6 @@ test:
     - docker logs aspnet
     - curl --retry 10 --retry-delay 5 -v http://localhost:8080/
     - docker stop aspnet
-    - docker rm aspnet
 
 deployment:
   hub:
