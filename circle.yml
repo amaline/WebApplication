@@ -9,7 +9,7 @@ dependencies:
 
 test:
   override:
-    - docker run -d -p 8080:5004 --name aspnet amaline/aspnettest; sleep 15
+    - docker run -d -p 8080:5000 --name aspnet amaline/aspnettest; sleep 15
     - docker logs aspnet
     - curl --retry 10 --retry-delay 5 -v http://localhost:8080/
     - docker stop aspnet
